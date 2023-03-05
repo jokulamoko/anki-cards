@@ -1,0 +1,464 @@
+あける	To open
+すわる	To sit down
+くる	To come
+しねる	To die
+けす	To turn off
+勉強する	To study　（いｒｒ）
+書く	To write　（かく）
+ある	There is
+いそぐ	To hurry
+まつ	To wait
+分かる	To understand　（う）
+いる	A person (is in) (る）& To need（う）
+とる	To take a photo　（う） To take a class/get a grade （う）
+買う	To buy　（かう）
+聞く	To listen （きく）
+会う	To meet (a person) （あう）
+ねる	To sleep　（る）
+行く	To go
+読む	To read
+する	To do　(irr）
+のむ	To drink
+話す	To speak（はなす）
+起きる	To get up （る）（おきる）
+帰る	To return （かえる）（う）
+みる	To see (る）
+やせる	To lose weight (ru)
+つとめる	To work for（る）
+きる	To put on (a shirt, dress)　（きる）（る）
+ふとる	To gain weight　（う）
+かける	To put on glasses　（る）
+持つ	To carry/hold　（もつ）
+もってくる	To bring a thing　(irr）
+でんわをかける	To make a phone call （る）
+しぬ	To die
+休む	To be absent/free　（やすむ）
+おふろにはいる	To have a bath（う）
+シャワーをあびる	To have a shower　（る）
+わすれる	To forget　（る）
+おしえる	To teach　（る）
+てったう	To help
+しめる	To close（る）
+好き（な）	Like　（すきな）
+にぎゃか（な）	Lively
+おもしろい	Interesting
+げんき（な）	Healthy
+きれい（な）	Beautiful
+やすい	Cheap
+古い	Old (ふるい）
+大きい	Large
+こわい	Frightening
+あつい	Hot
+いそがしい	Busy
+さむい	Cold (weather)
+いい	Good
+たのしい	Cool/fun
+やさしい	Friendly
+むずかしい	Difficult
+ひま（な）	Free (not busy)
+高い	Expensive　（たかい）
+しずか（な）	Quiet
+新しい	New
+きらい（な）	Disgusted
+小さい	Small
+つめたい	Cold (things）
+つまらない	Boring
+しんせつ（な）	Kind
+べんり（な）	Convenient
+早い	Fast　（はやい）
+ながい	Long
+かわいい	Cute
+あたまがいい	Bright/smart
+みじかい	Short (length)
+せがたかい	Tall (people)
+せがひくい	Short (people)
+けっこんする	To get married　（る）
+あめがふる	It rains　（う）
+あらう	To wash
+言う	To say　（いう）
+おそくなる	To be late　（う）
+思う	To think　（おもう）
+切る	To cut （う）（きる）
+作る	To make　（う）（つくる）
+もっていく	To take (a thing)　（持っていく）
+じろじろみる	To stare　（る）（じろじろ見る）
+すてる	To throw away（捨てる）（る）
+はじめる	To begin（る）（始める）
+うんてんする	To drive（いｒｒ）（運転する）
+せんたくする	To do laundry　（いｒｒ）（選択する）
+そうじする	To clean　（掃除する）（いｒｒ）
+でんわする	To call (irr)　（電話する）
+りょうりする	To cook（いｒｒ）（料理する）
+Verb （Plain, Past)	～た　（て　form　conjugation）
+るーVerb（Plain, Present, Negative)	～ない
+うーVerb （Plain,　Present,　Negative)	～あない　（Remove　う・い）
+るーVerb （Plain, Past, Negative)	～なかった
+うーVerb　（Plain, Past, Negative)	～あなかった （Remove う・い）
+いーadj　（Plain, Past)	～かった (Remove　い）
+なーadj　（Plain, Past)	～だった　(Remove　な）
+いーadj　（Plain, Negative)	～くない （Remove　い）
+なーadj　（Plain, Negative)	～じゃない　（Remove　な）
+いーadj　（Plain, Past, Negative)	～くなかった（Remove い）
+なーadj　（Plain, Past, Negative)	～じゃなかった （Remove　な）
+Noun　（Plain, Past)	～だった
+Noun (Plain, Negative)	～じゃない
+Noun (Plain, Past, Negative)	～じゃなかった
+青い	Blue　（あおい）
+赤い	Red　（あかい）
+くろい	Black　（黒い）
+さびしい	Lonely　（寂しい）
+白い	White　（しろい）
+わかい	Young　（若い）
+いじわる（な）	Mean-spirited　（意地悪な）
+おどる	To dance　（う）（踊る）
+おわる	Something ends （う）（終わる）
+にんきがある	To be popular　（う）（人気がある）
+ひく	To play (a string instrument or piano)（引く）
+もらう	To get (from somebody）
+おぼえる	To memorise　（る）（覚える）
+でる	To appear/attend （る）（出る）
+うんどうする	To do physical exercises（いｒｒ）（運動する）
+さんぽする	To go for a walk （いｒｒ）（散歩する）
+紙	Hair　（かみ）
+め	Eyes　(目）
+はな	Nose
+みみ	Ears　（耳）
+くち	Mouth　（口）
+は	Teeth
+ゆび	Fingers
+くび	Neck
+て	Hand
+あたま	Head　（頭）
+かお	Face　（顔）
+かた	Shoulder
+あご	Chin
+うで	Arm
+おなか	Belly
+せなか	Back
+くちびる	Lip
+こし	Hip
+つめ	Nail
+のど	Throat
+ひげ	Mustache/Beard
+まつげ	Eyelash
+まゆ	Eyebrow
+どう	Torso
+色	Colour　（いろ）
+いいこ	Good Child　（いい子）
+きょねん	Last year （去年）
+くすり	Medicine　（薬）
+今度	Near future　（こんど）
+しけん	Exam
+作文	Essay or Competition　（さくぶん）
+せんげつ	Last month　（先月）
+たんご	Word/vocabulary
+びょうき	Illness
+あき	Autumn
+いしゃ	Doctor
+えき	Station
+おかねもら	Rich Person
+きせつ	Season
+ぎゅうにゅう	Milk
+今年	This year　（ことし）
+せいかつ	Life; Living (生活）
+せかい	World
+ちかてつ	Subway
+てぶくる	Gloves
+はる	Spring
+病院	Hospital （びょういん）
+びん	Flight
+ふね	Ship/Boat
+やきゅう	Baseball
+ゆうめいじん	Celebrity
+よやく	Reservation
+りんご	Apple
+あたたかい	Warm （暖かい）
+おそい	Slow/late　（遅い）
+すずしい	Cool (weather)　（涼しい）
+ねむい	Sleepy （眠い）
+かんたん（な）	Easy （簡単）
+かかる	To take (amount of time/money) （No particle)　（う）
+とまる	To stay (at a hotel, etc)　（う）
+なる	To become　（う）
+はらう	To pay　（払う）
+きめる	To decide（決める）（る）
+旅行する	To travel （りょこうする）（いｒｒ）
+れんしゅうする	To practice　（練習する）
+いちばん	Best　（一番）
+～か～	Or
+～ヶ月間	For ... months　（～かげつ）
+このごろ	These days
+～週間	For ... weeks （～しゅうかん）
+どうやって	How (by what means)
+どちら	Which
+どっち	Which　(informal）
+どのぐらい	How much
+はやく	Fast/early
+ごろ	About
+おそをつく	To tell a lie　（う）
+おなかがすく	To become hungry
+サボる	To cut （う）
+ならう	To learn （習う）
+のぼる	To climb　（う）
+はたらく	To work
+つかれる	To get tired　（る）
+やめる	To quit　（る）
+けんかする	To have a fight　（いｒｒ）
+じょうかいする	To introduce (Irr)
+ダイエットする	To go on a diet (Irr)
+ちこくする	To be late (for an appointment) （いｒｒ）
+りょがくする	To study abroad（いｒｒ）
+きぎょか	Entrepreneur （気漁家）
+きょうだい	Brothers and sisters
+今朝	This morning （けさ）
+くうき	Air
+こんげつ	This month　（今月）
+てんきよほう	Weather forecast （天気予報）
+所	Place　（ところ）
+なつ	Summer
+なにか	Something
+なにも	Anything
+ふゆ	Winter
+らいげつ	Next Month
+上手（な）	Skillfull; good at ...　（じょうず）
+下手 （な）	Clumsy; poor at　（へた）
+おかし	Snacks
+おしょうがつ	New Year's
+おまつり	Festival
+おもちゃ	Toy
+歌手	Singer　（かしゅ）
+こちら	This person (polite）
+しゃちょう	President of a company
+しょうらい	Future
+じんじゃ	Shrine
+びじゅつかん	Art museum
+ゆめ	Dream
+売る	To sell （う）（うる）
+住む	To live　（すむ）
+映す	To reflect　（うつす）
+市	City　（いち）
+明るい	Bright　（あかるい）
+強い	Strong　（つよい）
+近い	Near　（ちかい）
+知る	To know　（しる）
+正しい	Correct　（ただしい）
+あまい	Sweet　（甘い）
+きんちょうする	To become nervous　（Irr)
+いみ	Meaning　（意味）
+おてあらい	Restroom　（お手洗い）
+かれ	Boyfriend;He
+きおん	Temperature　（気温）
+しあい	Match; game　（試合）
+せいじ	Politics　（政治）
+せいせき	Grade　（成績）
+せき	Cough
+はな	Flower （花）
+はれ	Sunny weather　（晴れ）
+ふく	Clothes　（服）
+ふつかよい	Hangover　（二日酔い）
+雪	Snow　（ゆき）
+ようじ	Business to take care of （用事）
+いたい	Hurt; painful　（痛い）
+おおい	There are many　（多い）
+せまい	Narrow;Not spacious　狭い
+つごうがわるい	Inconvenient：To have a scheduling conflict　（都合が悪い）
+わるい	Bad　（悪い）
+すてき（な）	Nice　（素敵）
+あるく	To walk　（歩く）
+かぜをひく	To catch a cold
+きょうみがある	To be interested　（興味がある）（う）
+なくす	To lose
+ねつがある	To have a fever　（熱がある）　（う）
+のどがかわく	To become thirsty　（のどが渇く）
+せきがでる	To cough　（咳が出る）（る）
+わかれる	To break up; to separate　（別れる）（る）
+しんぱいする	To worry　（心配する）
+～ている・～ています	（１）Time-consuming Verbs - Currently Doing （２）Instantaneous-changes Verbs - Result of change I.e.　（１）スーさんはいま勉強しています。（Sue is studying right now) （2）山下先生はけっこんしています。（Professor Yamashita is married)
+てーForm　（いーAdj)	～い　ー＞　～くて
+てーForm　（いｒｒ－Adj)	いいーよくて
+てーForm　（なーAdj)	～な　→　～で
+てーForm　（Noun）	～で　（Add)
+ひとり	一人
+ふたり	二人
+よにん	四人
+～と思います。	I think　～　（Plain form)
+まだ～ていません	（Topic) haven't yet ～
+（Explanation)から（Situation)	(Explanation), therefore (situation)
+AのほうがBより～	A is more (~) than B
+AとBとどちらのほうが～	Between A and B, which is more (~)?
+（Class of items)の中で、Aがいちばん～	A is the most (~) among (class of items)
+～つもりだ	（Topic)Intend to ～　（Present, Short)
+次	Next　（つぎ）
+毎	Every　（まい）
+子	Child （こ）
+会社	Company　（かいしゃ）
+社	Shrine　（しゃ）
+入る	To enter （はいる）
+小学校	Primary School　（しょうがっこう）
+中学校	Middle school （ちゅうがっこう）
+高校	High school　（こうこう）
+電車	Train　（でんしゃ）
+電気	Electricity　（でんき）
+電話	Telephone　（でんわ）
+車	Car　（くるま）
+じてんしゃ	Bicycle
+仕事	Occupation　（しごと）
+仕える	To serve or work under　（つかえる）
+会社員	Company employee　（かいしゃいん）
+家	House　（いえ）
+雨天	Rainy weather （うてん）
+午	Noon　（ご）
+午前	Morning　（ごぜん）
+午後	Afternoon （ごご）
+今後	After this　（こんご）
+名前	Name　（なまえ）
+有名（な）	Famous　（ゆうめいな）
+間	Between/length of unit （あいだ）
+朝	Morning　（あさ）
+夜	Night　（よる）
+かう	To own (a pet)
+毎年	Every year　（まいとし）
+来年	Next year （らいねん）
+町	Town　（まち）
+長所	Strong/good point　（ちょうしょ）
+道	Road　（みち）
+立つ	To stand　（たつ）
+文明	Civilisation （ぶんめい）
+勉学	Study　（べんがく）
+映画	Movie　（えいが）
+近所	Neighborhood　（きんじょ）
+手紙	Letter　（てがみ）
+歌う	To sing　（うたう）
+～と言っていました	（Subject) said ～
+～ないと思います	I don't think　～
+～てもいいです（か）	You can ～　（Can I ~)
+～てはいけません	You must not ～
+いろ　（な）	Various　（な）
+へいじつ	Weekday　（平日）
+おどろく	To be surprised
+すごす	To spend time
+私たち	We
+けんめい	Hard work
+ほこり	Pride
+西	West　（にし）
+北	North　（きた）
+東	East　（ひがし）
+南	South　（みなみ）
+みどり	Green　（Note that it is a noun, not an adj)
+きいろい	Yellow
+ちゃいろい	Brown
+ほしい	My own wish
+たい	My own wants
+おはよう	Good morning
+こんいちは	Good afternoon
+こんばんは	Good evening
+さようなら	Good-bye
+おやすみ（なさい）	Good night
+ただいま	I'm home
+いただきます	Thank you for the meal （Before eating)
+ごちそうさま（でした）	Thank you for the meal (after eating)
+しゅふ	Housewife
+べんごし	Lawyer
+にく	Meat
+魚	Fish　（さかな）
+やさい	Vegetables
+百	Hundred （ひゃく）
+千	Thousand　（せん）
+一万	Ten thousand　（いちまん）
+三百	さんびゃく
+六百	Six hundred（ろっぴゃく）
+八百	Eight hundred　（はっぴゃく）
+三千	Three thousand　（さんぜん）
+八千	Eight thousand （はっせん）
+ざっし	Magazine
+おみやげ	Souvenir
+うしろ	Back
+上	On　（うえ）
+近く	Near　（ちかく）
+となり	Next （となり）
+おたく	（Someone's) home/house
+大人	Adult　（おとな）
+外国語	Foreign language （がいこくご）
+がっき	Musical instrument （がっき）
+こうこく	Advertisement
+ことば	Language
+ぶっか	（Consumer) prices
+みせ	Shop
+やくそく	Promise/appointment
+わたくし	I (formal)
+うれしい	Glad
+かなしい	Sad
+からい	Hot and spicy; salty
+きびしい	Strict
+すごい	Incredible;awesome
+しあわせ（な）	Lasting happiness
+だめ（な）	No good
+あむ	To knit
+かす	To lend; to rent
+がんばる	To do one's best;try hard （う）
+なく	To cry
+みがく	To brusth (teeth);To polish
+やくそくをまもる	To keep a promise　（う）
+かんどうする	To be moved/touched (by...) （～に）（Irr)
+～かい	。。。Times
+じつは	As a matter of fact,...
+せんぶ	All
+～ともうします	My name is ...
+Ability （るーVerb)	～られる
+Ability (うーVerb)	える　（Drop　う）
+Ability　（Irregular: くる、する）	こられる、できる
+～し、～し、＿＿＿	（Reason)し、（Reason)し、（Situation)
+～そうです	It looks ～　（Drop　い、な）
+そう（な）	Looking
+～てみる	～Trying/doing something tentatively
+～なら～	（Noun)Aなら（Predicate)X
+（Period)に（Frequency)	（Frequency)per（Period)
+ほか	Other　（他）
+すぐ（に）	Immediately
+～まい	「Number of thin objects] E.g. ７まいのかみ
+きょうしつ	Classroom　（教室）
+おなじ	Same　（同じ）
+見せる	To show　（みせる）（る）
+もんだい	Problem　（問題）
+しつもん	Question　（質問）
+こたえる	To answer　（る）（答える）
+くらい	Dark
+あいする	To love　（愛する）（Irr)
+こまる	To be in trouble or troubled（困る）（る）
+なぜ・何で	Why
+こたえ	Answer
+ちがう	To differ
+はし	Bridge・Chopsticks
+むら	Village
+おりる	To get off/descend　（る）
+のる	To ride　（う）
+すすむ	To go (distance)　（進む）
+ねぐ	To remove (e.g. shoes)
+あぶない	Dangerous
+かど	Corner
+ほそい	Thin
+まるい	Round
+あつくい	Thick
+せっけん	Soap
+はこ	Box
+おさら	Plate
+けいたい電話	Cell phone
+はがき	Postcard
+きって	To stamp
+ふうとう	Envelope
+カギ	Keys
+じどうしゃ	Automobile
+ゆっくり	Slowly
+うわぎ	Jacket
+ぎゅうにく	Beef　（牛肉）
+ぶたにく	Pork　（豚肉）
+とりにく	Chicken （鶏肉）
+ひつれな	Sneaky/hidden
+へんな	Strange
+入れる	To put in　（る）
+すくない	（Only) a few
+はしる	To run　（う）
+たぶん	Probably
+たいせつな	
+ぶんしょう	Text/Passage
+帰す	To return （A thing)
