@@ -47,7 +47,7 @@ class Deck:
 
             # verify result
             successful_uploads = [True if note_result else False for note_result in result]
-            errors = [note for note in note_list if not successful_uploads[i]]
+            errors = [note for i, note in enumerate(note_list) if not successful_uploads[i]]
             print(f'{sum([int(x) for x in successful_uploads])} from {len(notes)} notes successfully uploaded!') 
 
             return result, errors

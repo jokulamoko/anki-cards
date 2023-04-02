@@ -23,14 +23,14 @@ for i in range(len(df_new)):
     new_note = Note(note_serial)
     new_notes.append(new_note)
 
+# add to deck
 result, errors = deck.add_to_anki(new_notes)
 
-errors
 
-# for the successful cards, mark 'uploaded'
-error_notes = [Note(error) for error in errors]
-succes_notes = set(new_notes) - set(error_notes)
-len(succes_notes)
-len(new_notes)
-
-# UPDATE speak on telephone
+# for the successful cards, mark 'uploaded' and save result
+df_new['uploaded'] = [int(x is not None) for x in result]
+notes_cols = list(df_notes.columns)
+notes_cols.remove('uploaded')
+df_result = df_notes.drop(columns=['uploaded']).fillna('').merge(df_new, on=notes_cols, how='outer')
+df_result['uploaded'].fillna(1, inplace=True)
+df_result.to_excel(data_dir / 'Japanese Vocab.xlsx', index=False)

@@ -1,4 +1,4 @@
-https://www.google.com/search?client=firefox-b-d&q=ankiconnect
+Anki-Connect add-on required for interacting with anki API
 
 https://foosoft.net/projects/anki-connect/
 

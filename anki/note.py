@@ -4,9 +4,13 @@ from math import isnan
 class Note:
     def __init__(self, note_info, new=True, **kwargs):
         if new:
-            # transform into standard API response format for anki
             note_fields = list(note_info.keys())
+            for key in note_fields:
+                note_info[key] = note_info[key].replace('\n', '<br>')
+
+            # transform into standard API response format for anki
             note_info = {'fields':{field:{'value':note_info[field]} for field in note_fields if note_info[field]}}
+
         self.dict = note_info
     
     def __repr__(self):
