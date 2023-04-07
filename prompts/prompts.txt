@@ -1,0 +1,87 @@
+Can you list the following words in a CSV format with these columns:
+
+1. English translation
+2. Kanji
+3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
+4. Alternative forms
+5. Sentence (the word used in a short example sentence, which uses hirigana and basic, common kanji)
+
+Leave the alternative forms column blank
+
+The words are:
+Color
+Medicine
+Near future
+Essay
+Exam
+Word
+Illness
+
+
+
+
+Can you list the following adjectives in a CSV format (no index) with these columns:
+
+1. English translation
+2. Kanji
+3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
+4. Alternative forms
+5. Sentence  (the word used in a short example sentence, which uses hirigana and basic, common kanji, no ")
+
+For the 'Alternative forms' column, can you please include each word with the following transformation separated by a new line, in the one cell per translated word:
+- with the negative particle
+- past tense of the copula
+- past tense negative sentence
+
+For example, for 頭がいい, the output is:
+Smart, あたまがいい,　頭がよくない｜頭がよかった｜頭がよくなかった"
+
+The words are:
+Blue
+Red
+Black
+Lonely
+White
+Young
+Mean-spirited
+
+
+
+
+Can you list the following verbs in a CSV format with these columns:
+
+1. English translation
+2. Kanji
+3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
+4. Alternative forms
+5. Sentence  (the word used in a short example sentence, which uses hirigana and basic, common kanji, no ")
+
+For the 'Alternative forms' column, can you please include each word with the following transformation separated by a new line, in the one cell per translated word:
+- formal form
+- negative casual form
+- te form
+
+For example, for 'To use', the output is:
+To use,使う,つかう,使います|使わない|使って
+
+The words are:
+To dance
+(Something) ends
+To be popular
+(Something) begins
+To play (a string instrument or piano)
+To get (a thing from somebody)
+To memorise
+To appear; to attend
+To do physical exercise
+To take a walk
+
+
+
+
+Next time: make sure no ' '
+
+
+
+
+

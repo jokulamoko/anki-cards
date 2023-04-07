@@ -1,31 +1,25 @@
-from anki import Deck, Note, invoke
+from anki import Deck, Note
 import pandas as pd
 import os
 from pathlib import Path
 
-deck_name = 'Japanese Vocab'
 
-deck = Deck(deck_name=deck_name, model_name='Vocabulary')
-print(f'Notes in {deck_name}: {deck.n_notes}')
+DECK_NAME = 'Japanese Vocab'
+MODEL_NAME = 'Vocabulary'
+KEY_NAME = 'translation'
+NOTE_FIELDS = ['translation', 'english notes', '日本語', 'hirigana', 'japanese notes', 'sentence']
+
+deck = Deck(deck_name=DECK_NAME, model_name='Vocabulary')
+print(f'Notes in {DECK_NAME}: {deck.n_notes}')
 
 # load excel file of data
 data_dir = Path(os.getcwd()) / 'data'
 df_notes = pd.read_excel(data_dir / 'Japanese Vocab.xlsx')
-note_fields = list(df_notes.columns)
-note_fields.remove('uploaded')
 df_new = df_notes[df_notes.uploaded!=1].reset_index(drop=True).fillna('')
 print(f'{len(df_new)} new cards!')
 
-# define notes
-new_notes = []
-for i in range(len(df_new)):
-    note_serial = df_new[note_fields].loc[i, :].to_dict()
-    new_note = Note(note_serial)
-    new_notes.append(new_note)
-
 # add to deck
-result, errors = deck.add_to_anki(new_notes)
-
+result, errors = deck.add_notes_to_deck_from_df(df_new, NOTE_FIELDS)
 
 # for the successful cards, mark 'uploaded' and save result
 df_new['uploaded'] = [int(x is not None) for x in result]

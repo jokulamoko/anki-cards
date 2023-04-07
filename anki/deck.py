@@ -1,7 +1,8 @@
 from .requests import invoke
 from .note import Note
-from tqdm import tqdm
 from typing import List
+import pandas as pd
+from tqdm import tqdm
 
 class Deck:
     def __init__(self, deck_name, model_name, notes=None):
@@ -29,7 +30,7 @@ class Deck:
     def __str__(self):
         return f"{self.deck_name}, {self.n_notes} notes"
 
-    def add_to_anki(self, note_list:List[Note]):
+    def add_notes_to_deck(self, note_list:List[Note]):
         if self.new_deck:
             raise Exception('This is not an existing deck.\nCreating a new deck is not implemented')
         else:
@@ -51,3 +52,65 @@ class Deck:
             print(f'{sum([int(x) for x in successful_uploads])} from {len(notes)} notes successfully uploaded!') 
 
             return result, errors
+
+    def add_notes_to_deck_from_df(self, df_notes: pd.DataFrame, note_fields):
+        new_notes = []
+        for i in range(len(df_notes)):
+            note_serial = df_notes[note_fields].loc[i, :].to_dict()
+            new_note = Note(note_serial)
+            new_notes.append(new_note)
+
+        # add to deck
+        result, errors = self.add_notes_to_deck(new_notes)
+        return result, errors
+
+    def compare_to_df(self, df_notes:pd.DataFrame, key_name:str, verbose=True):
+        """
+        Compares the notes in an excel file to those in the deck by a particular key.
+        Useful check before editing notes using an excel file.
+        """
+        excel_note_keys = set(df_notes[key_name])
+        deck_unmatched_cards = []
+        excel_unmatched_cards = []
+
+        # compare the deck against excel notes
+        for note in self.notes:
+            note_key = note.dict['fields'][key_name]['value']
+            if note_key not in excel_note_keys:
+                deck_unmatched_cards.append(note_key)
+
+        # compare excel notes against the deck
+        deck_note_keys = set([note.dict['fields'][key_name]['value'] for note in self.notes])
+        for note_key in df_notes[key_name]:
+            if note_key not in deck_note_keys:
+                excel_unmatched_cards.append(note_key)
+
+        if verbose:
+            print(deck_unmatched_cards)
+            print(excel_unmatched_cards)
+
+        return deck_unmatched_cards, excel_unmatched_cards
+    
+    def update_notes_with_df(self, df_notes:pd.DataFrame, key_name:str, note_fields:List[str]):
+        print(f'First building index of note by key {key_name}')
+        note_keys = [note.dict['fields'][key_name]['value'] for note in self.notes]
+
+        print('Updating notes...')
+        missing_notes = []
+        updated_notes = []
+        for i in tqdm(range(len(df_notes))):
+            try:
+                note_idx = note_keys.index(df_notes.loc[i, key_name])
+            except ValueError:
+                missing_notes.append(note_idx)
+                continue
+
+            note = self.notes[note_idx]
+            for field in note_fields:
+                note.dict['fields'][field]['value'] = df_notes.loc[i, field]
+            note_update_result = note.update_note()
+            updated_notes.append(note_update_result)
+
+        print(f'{len(updated_notes)} notes updated!')
+        print(f'Missing {len(missing_notes)} that are in df_notes, but not in the deck.')
+        return updated_notes, missing_notes

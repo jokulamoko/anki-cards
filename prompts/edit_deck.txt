@@ -1,5 +1,30 @@
-from .requests import invoke
+Can you write a script which updates cards in a deck with the fields found for that particular card in an excel file.
+Use the key 'translation' to match cards in the deck with cards in the excel file.
+Please use the constructs below as much as possible.
+Please also minimise the number of HTTP requests made.
+
+
+Python below:
+
+import json
+import urllib.request
 from math import isnan
+
+def request(action, **params):
+    return {'action': action, 'params': params, 'version': 6}
+
+def invoke(action, **params):
+    requestJson = json.dumps(request(action, **params)).encode('utf-8')
+    response = json.load(urllib.request.urlopen(urllib.request.Request('http://localhost:8765', requestJson)))
+    if len(response) != 2:
+        raise Exception('response has an unexpected number of fields')
+    if 'error' not in response:
+        raise Exception('response is missing required error field')
+    if 'result' not in response:
+        raise Exception('response is missing required result field')
+    if response['error'] is not None:
+        raise Exception(response['error'])
+    return response['result']
 
 class Note:
     def __init__(self, note_info, new=True, **kwargs):
@@ -59,4 +84,29 @@ class Note:
         params['note']['id'] = self.noteId
         result = invoke('updateNoteFields', **params)
         return result
-    
+
+class Deck:
+    def __init__(self, deck_name, model_name, notes=None):
+        self.deck_name = deck_name
+        self.model_name = model_name
+        self.new_deck = True
+ 
+        if notes:
+            self.n_notes = len(notes)
+            self.notes = notes
+        else:
+            self.note_ids = invoke('findNotes', **{'query':f'deck:"{self.deck_name}"'})
+            self.n_notes = len(self.note_ids)
+            note_infos = invoke('notesInfo', **{'notes':self.note_ids})
+            self.notes = [Note(note_info, new=False) for note_info in note_infos]
+            self.new_deck = False
+
+            # get model
+            if len(self.notes) > 0:
+                self.model_name = self.notes[0].dict['modelName']
+            model_fields = invoke(action='modelFieldNames', modelName=self.model_name)
+            model_fields.sort()
+            self.model_fields = model_fields
+
+    def __str__(self):
+        return f"{self.deck_name}, {self.n_notes} notes"

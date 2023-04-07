@@ -1,26 +1,22 @@
-from anki import Deck
+import pandas as pd
+import os
+from pathlib import Path
 
-kanji_deck_name = 'Kanji (Heisig)'
+from anki.deck import Deck
 
-deck = Deck(deck_name=kanji_deck_name)
-deck.n_notes
+DECK_NAME = 'Japanese Vocab'
+MODEL_NAME = 'Vocabulary'
+KEY_NAME = 'translation'
+NOTE_FIELDS = ['translation', 'english notes', '日本語', 'hirigana', 'japanese notes', 'sentence']
 
-# test that adding notes is fine
-# note = deck.notes[0]
-# note.duplicate_note(kanji_deck_name, additional_params={'allowDuplicate':True})
+# load excel file and deck
+data_dir = Path(os.getcwd()) / 'data'
+df_notes = pd.read_excel(data_dir / 'Japanese Vocab.xlsx')
+deck = Deck(DECK_NAME, MODEL_NAME)
 
-# make changes to the cards
-from tqdm import tqdm
+# first compare the cards by the key 'translation'
+# deck_unmatched_cards, excel_unmatched_cards = deck.compare_to_df(df_notes, KEY_NAME)
 
-def emphasise_keyword(note):
-    before = note.fields['English']['value']
-    words = before.split(', ')
-    if len(words) > 1 and '<br>' not in before:
-        keyword = "<b>"+ words[0] + "</b><br><br>"
-        updated = keyword + ', '.join(words[1:])
-        note.fields['English']['value'] = updated
-
-for note in tqdm(deck.notes):
-    emphasise_keyword(note)
-    note.update_note()
+# then edit notes
+updated_notes, missing_notes = deck.update_notes_with_df(df_notes, KEY_NAME, NOTE_FIELDS)
 
