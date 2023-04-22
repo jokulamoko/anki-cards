@@ -54,7 +54,7 @@ Can you list the following verbs in a CSV format with these columns:
 2. Kanji
 3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
 4. Alternative forms
-5. Sentence  (the word used in a short example sentence, which uses hirigana and basic, common kanji, no ")
+5. Sentence  (the word used in a short example sentence. Express the sentence in two forms: in full japanese, and with just hirigana and katakana)
 
 For the 'Alternative forms' column, can you please include each word with the following transformation separated by a new line, in the one cell per translated word:
 - formal form
@@ -65,18 +65,8 @@ For example, for 'To use', the output is:
 To use,使う,つかう,使います|使わない|使って
 
 The words are:
-To dance
-(Something) ends
-To be popular
-(Something) begins
-To play (a string instrument or piano)
-To get (a thing from somebody)
-To memorise
-To appear; to attend
-To do physical exercise
-To take a walk
-
-
+To explore
+To take (a thing)　ー　持って行く
 
 
 Next time: make sure no ' '
@@ -84,4 +74,31 @@ Next time: make sure no ' '
 
 
 
+
+For the following words, list in CSV format with these columns:
+1. English translation
+2. Sentence (once with full Kanji, then the same sentence with Kanji replaced by Hirigana)
+
+An example response for 後で:
+Later on,後でリキさんは図書館に行く。（あとでりきさんはとしょかんにいく。）
+
+
+The list:
+青い
+赤い
+黒い
+寂しい
+白い
+若い
+意地悪な
+踊る
+終わる
+流行る
+始まる
+弾く
+もらう
+覚える
+出る
+運動する
+散歩する
 

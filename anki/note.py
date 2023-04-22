@@ -56,7 +56,7 @@ class Note:
 
     def update_note(self):
         params =  {'note' : self._export_format()}
-        params['note']['id'] = self.noteId
+        params['note']['id'] = self.dict['noteId']
         result = invoke('updateNoteFields', **params)
         return result
     

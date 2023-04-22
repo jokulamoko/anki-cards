@@ -107,7 +107,9 @@ class Deck:
 
             note = self.notes[note_idx]
             for field in note_fields:
-                note.dict['fields'][field]['value'] = df_notes.loc[i, field]
+                field_value = df_notes.loc[i, field]
+                if type(field_value) is str:
+                    note.dict['fields'][field]['value'] = field_value
             note_update_result = note.update_note()
             updated_notes.append(note_update_result)
 

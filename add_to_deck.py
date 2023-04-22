@@ -28,3 +28,4 @@ notes_cols.remove('uploaded')
 df_result = df_notes.drop(columns=['uploaded']).fillna('').merge(df_new, on=notes_cols, how='outer')
 df_result['uploaded'].fillna(1, inplace=True)
 df_result.to_excel(data_dir / 'Japanese Vocab.xlsx', index=False)
+
