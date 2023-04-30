@@ -1,23 +1,31 @@
+
+###### NOUNS
+
+
 Can you list the following words in a CSV format with these columns:
 
 1. English translation
 2. Kanji
 3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
 4. Alternative forms
-5. Sentence (the word used in a short example sentence, which uses hirigana and basic, common kanji)
+5. Sentence (the word used in a short example sentenc which has two forms separated by " |". First form with all Kanji possible, second with hirigana and katakana)
 
 Leave the alternative forms column blank
 
+For example, for 秋, return:
+Autumn,秋,あき,,今年の秋はとても涼しいです。 |ことしのあきはとてもすずしいです。。
+
 The words are:
-Color
-Medicine
-Near future
-Essay
-Exam
-Word
-Illness
+後
+出身
+そして
+～だけ
+～点
+久しぶり
+まあまあ
+もっと
 
-
+###### ADJECTIVES
 
 
 Can you list the following adjectives in a CSV format (no index) with these columns:
@@ -26,7 +34,7 @@ Can you list the following adjectives in a CSV format (no index) with these colu
 2. Kanji
 3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
 4. Alternative forms
-5. Sentence  (the word used in a short example sentence, which uses hirigana and basic, common kanji, no ")
+5. Sentence (the word used in a short example sentenc which has two forms separated by " |". First form with all Kanji possible, second with hirigana and katakana)
 
 For the 'Alternative forms' column, can you please include each word with the following transformation separated by a new line, in the one cell per translated word:
 - with the negative particle
@@ -34,19 +42,20 @@ For the 'Alternative forms' column, can you please include each word with the fo
 - past tense negative sentence
 
 For example, for 頭がいい, the output is:
-Smart, あたまがいい,　頭がよくない｜頭がよかった｜頭がよくなかった"
+Smart,あたまがいい,頭がよくない｜頭がよかった｜頭がよくなかった,彼女は頭がいいです。|かのじょはあたまがいいです。
 
 The words are:
-Blue
-Red
-Black
-Lonely
-White
-Young
-Mean-spirited
+暖かい
+遅い
+涼しい
+冷たい
+簡単な
 
 
 
+
+
+###### VERBS
 
 Can you list the following verbs in a CSV format with these columns:
 
@@ -54,51 +63,19 @@ Can you list the following verbs in a CSV format with these columns:
 2. Kanji
 3. Hirigana (if there is no Kanji for this word, please put the hirigana in the Kanji column and leave the Hirigana column blank)
 4. Alternative forms
-5. Sentence  (the word used in a short example sentence. Express the sentence in two forms: in full japanese, and with just hirigana and katakana)
+5. Sentence  (the word used in a short example sentence. Express the sentence in two forms: in full japanese, and with just hirigana and katakana. Do not put any Romanji)
 
 For the 'Alternative forms' column, can you please include each word with the following transformation separated by a new line, in the one cell per translated word:
 - formal form
 - negative casual form
 - te form
 
-For example, for 'To use', the output is:
-To use,使う,つかう,使います|使わない|使って
+For example, for 使う, the output is:
+To use,使う,つかう,使います|使わない|使って,彼女は新しいスマートフォンを使っています |かのじょはあたらしいすまーとふぉんをつかっています
 
 The words are:
-To explore
-To take (a thing)　ー　持って行く
-
-
-Next time: make sure no ' '
-
-
-
-
-
-For the following words, list in CSV format with these columns:
-1. English translation
-2. Sentence (once with full Kanji, then the same sentence with Kanji replaced by Hirigana)
-
-An example response for 後で:
-Later on,後でリキさんは図書館に行く。（あとでりきさんはとしょかんにいく。）
-
-
-The list:
-青い
-赤い
-黒い
-寂しい
-白い
-若い
-意地悪な
-踊る
-終わる
-流行る
-始まる
-弾く
-もらう
-覚える
-出る
-運動する
-散歩する
+けんかする
+紹介する
+遅刻する
+留学する
 

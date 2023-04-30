@@ -18,6 +18,10 @@ df_notes = pd.read_excel(data_dir / 'Japanese Vocab.xlsx')
 df_new = df_notes[df_notes.uploaded!=1].reset_index(drop=True).fillna('')
 print(f'{len(df_new)} new cards!')
 
+
+
+###################
+
 # add to deck
 result, errors = deck.add_notes_to_deck_from_df(df_new, NOTE_FIELDS)
 

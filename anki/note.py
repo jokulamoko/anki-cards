@@ -1,5 +1,8 @@
 from .requests import invoke
+from .styling import Style
+
 from math import isnan
+from typing import List, Optional
 
 class Note:
     def __init__(self, note_info, new=True, **kwargs):
@@ -54,7 +57,7 @@ class Note:
         result = invoke('addNote', **params)
         return result
 
-    def update_note(self):
+    def update_note(self, styles:Optional[List[Style]] = None):
         params =  {'note' : self._export_format()}
         params['note']['id'] = self.dict['noteId']
         result = invoke('updateNoteFields', **params)

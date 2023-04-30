@@ -1,6 +1,8 @@
 from .requests import invoke
 from .note import Note
-from typing import List
+from .styling import Style
+
+from typing import List, Optional
 import pandas as pd
 from tqdm import tqdm
 
@@ -30,7 +32,7 @@ class Deck:
     def __str__(self):
         return f"{self.deck_name}, {self.n_notes} notes"
 
-    def add_notes_to_deck(self, note_list:List[Note]):
+    def add_notes_to_deck(self, note_list:List[Note], styles:Optional[List[Style]] = None):
         if self.new_deck:
             raise Exception('This is not an existing deck.\nCreating a new deck is not implemented')
         else:
@@ -42,7 +44,8 @@ class Deck:
             
             # then addNotes
             print('Adding notes...')
-            notes = [note._export_format(add_values={'modelName':self.model_name, 'deckName':self.deck_name}) for note in note_list]
+            # TODO add styles
+            notes = [note._export_format(add_values={'modelName':self.model_name, 'deckName':self.deck_name}) for note in note_list]            
             result = invoke('addNotes', notes=notes)
             print('Done!')
 
@@ -91,7 +94,13 @@ class Deck:
 
         return deck_unmatched_cards, excel_unmatched_cards
     
-    def update_notes_with_df(self, df_notes:pd.DataFrame, key_name:str, note_fields:List[str]):
+    def update_notes_with_df(
+            self, 
+            df_notes:pd.DataFrame, 
+            key_name:str, 
+            note_fields:List[str], 
+            styles:Optional[List[Style]] = None
+            ):
         print(f'First building index of note by key {key_name}')
         note_keys = [note.dict['fields'][key_name]['value'] for note in self.notes]
 
@@ -110,6 +119,9 @@ class Deck:
                 field_value = df_notes.loc[i, field]
                 if type(field_value) is str:
                     note.dict['fields'][field]['value'] = field_value
+            if styles:
+                for style in styles:
+                    style.apply_styling(note)
             note_update_result = note.update_note()
             updated_notes.append(note_update_result)
 
