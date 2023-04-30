@@ -4,11 +4,7 @@ from pathlib import Path
 
 from anki.deck import Deck
 from anki.styling import AddLineBreaks
-
-DECK_NAME = 'Japanese Vocab'
-MODEL_NAME = 'Vocabulary'
-KEY_NAME = 'translation'
-NOTE_FIELDS = ['translation', 'english notes', '日本語', 'hirigana', 'japanese notes', 'sentence']
+from settings import DECK_NAME, MODEL_NAME, KEY_NAME, NOTE_FIELDS
 
 # load excel file and deck
 data_dir = Path(os.getcwd()) / 'data'

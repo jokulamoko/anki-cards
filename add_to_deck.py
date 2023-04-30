@@ -1,13 +1,11 @@
 from anki import Deck, Note
+from anki.styling import AddLineBreaks
+from settings import DECK_NAME, MODEL_NAME, KEY_NAME, NOTE_FIELDS
+
 import pandas as pd
 import os
 from pathlib import Path
 
-
-DECK_NAME = 'Japanese Vocab'
-MODEL_NAME = 'Vocabulary'
-KEY_NAME = 'translation'
-NOTE_FIELDS = ['translation', 'english notes', '日本語', 'hirigana', 'japanese notes', 'sentence']
 
 deck = Deck(deck_name=DECK_NAME, model_name='Vocabulary')
 print(f'Notes in {DECK_NAME}: {deck.n_notes}')
@@ -23,7 +21,7 @@ print(f'{len(df_new)} new cards!')
 ###################
 
 # add to deck
-result, errors = deck.add_notes_to_deck_from_df(df_new, NOTE_FIELDS)
+result, errors = deck.add_notes_to_deck_from_df(df_new, NOTE_FIELDS, styles=[AddLineBreaks])
 
 # for the successful cards, mark 'uploaded' and save result
 df_new['uploaded'] = [int(x is not None) for x in result]

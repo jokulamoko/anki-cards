@@ -44,7 +44,10 @@ class Deck:
             
             # then addNotes
             print('Adding notes...')
-            # TODO add styles
+            if styles:
+                for note in notes:
+                    for style in styles:
+                        style.apply_styling(note)
             notes = [note._export_format(add_values={'modelName':self.model_name, 'deckName':self.deck_name}) for note in note_list]            
             result = invoke('addNotes', notes=notes)
             print('Done!')
@@ -56,7 +59,7 @@ class Deck:
 
             return result, errors
 
-    def add_notes_to_deck_from_df(self, df_notes: pd.DataFrame, note_fields):
+    def add_notes_to_deck_from_df(self, df_notes: pd.DataFrame, note_fields, styles:Optional[List[Style]] = None):
         new_notes = []
         for i in range(len(df_notes)):
             note_serial = df_notes[note_fields].loc[i, :].to_dict()
@@ -64,7 +67,7 @@ class Deck:
             new_notes.append(new_note)
 
         # add to deck
-        result, errors = self.add_notes_to_deck(new_notes)
+        result, errors = self.add_notes_to_deck(new_notes, styles=styles)
         return result, errors
 
     def compare_to_df(self, df_notes:pd.DataFrame, key_name:str, verbose=True):
